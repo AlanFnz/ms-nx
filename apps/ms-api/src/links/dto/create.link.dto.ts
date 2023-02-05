@@ -1,4 +1,4 @@
-export interface CreateFeatureFlagDto {
+export interface CreateLinkDto {
   name: string;
   title: string;
   url: string;

@@ -1,13 +1,13 @@
 import debug from 'debug';
 import { Types } from 'mongoose';
 
-import { CreateFeatureFlagDto } from '../dto/create.link.dto';
+import { CreateLinkDto } from '../dto/create.link.dto';
 import { PatchLinkDto } from '../dto/patch.link.dto';
 import { PutLinkDto } from '../dto/put.link.dto';
 
 import mongooseService from '../../common/services/mongoose.service';
 
-const log: debug.IDebugger = debug('app:feature-flags-dao');
+const log: debug.IDebugger = debug('app:link-dao');
 
 class LinkDao {
   Schema = mongooseService.getMongoose().Schema;
@@ -22,7 +22,7 @@ class LinkDao {
     type: { type: String, required: true },
   });
 
-  Feature = mongooseService
+  Link = mongooseService
     .getMongoose()
     .model('Link', this.linkSchema);
 
@@ -35,36 +35,36 @@ class LinkDao {
 
   // methods /////////////////
 
-  async addFeature(featureFields: CreateFeatureFlagDto) {
-    return await new this.Feature(featureFields);
+  async addLink(featureFields: CreateLinkDto) {
+    return await new this.Link(featureFields);
   }
 
-  async getFeatureById(featureId: Types.ObjectId) {
-    return this.Feature.findById(featureId).exec();
+  async getLinkById(featureId: Types.ObjectId) {
+    return this.Link.findById(featureId).exec();
   }
 
-  async getFeatures(limit = 25, page = 0) {
-    return this.Feature.find()
+  async getLinks(limit = 25, page = 0) {
+    return this.Link.find()
       .limit(limit)
       .skip(limit * page)
       .exec();
   }
 
-  async updateFeatureById(
+  async updateLinkById(
     featureId: Types.ObjectId,
     featureFields: PatchLinkDto | PutLinkDto
   ) {
-    const existingFeature = await this.Feature.findOneAndUpdate(
+    const existingLink = await this.Link.findOneAndUpdate(
       { _id: featureId },
       { $set: featureFields },
       { new: true }
     ).exec();
 
-    return existingFeature;
+    return existingLink;
   }
 
-  async removeFeatureById(featureId: Types.ObjectId) {
-    return this.Feature.deleteOne({ _id: featureId }).exec();
+  async removeLinkById(featureId: Types.ObjectId) {
+    return this.Link.deleteOne({ _id: featureId }).exec();
   }
 }
 

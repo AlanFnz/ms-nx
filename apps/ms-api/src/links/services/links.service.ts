@@ -1,34 +1,34 @@
 import { Types } from 'mongoose';
 
-import FeatureFlagsDao from "../dao/links.dao";
+import LinkDao from "../dao/link.dao";
 import { CRUD } from "../../common/interfaces/crud.interface";
-import { CreateFeatureFlagDto } from "../dto/create.link.dto";
+import { CreateLinkDto } from "../dto/create.link.dto";
 import { PutLinkDto } from "../dto/put.link.dto";
 import { PatchLinkDto } from "../dto/patch.link.dto";
 
 class LinksService implements CRUD {
-  async create(resource: CreateFeatureFlagDto) {
-    return FeatureFlagsDao.addFeature(resource);
+  async create(resource: CreateLinkDto) {
+    return LinkDao.addLink(resource);
   }
 
   async deleteById(id: Types.ObjectId) {
-    return FeatureFlagsDao.removeFeatureById(id);
+    return LinkDao.removeLinkById(id);
   }
 
   async list(limit: number, page: number) {
-    return FeatureFlagsDao.getFeatures(limit, page);
+    return LinkDao.getLinks(limit, page);
   }
 
   async patchById(id: Types.ObjectId, resource: PatchLinkDto) {
-    return FeatureFlagsDao.updateFeatureById(id, resource);
+    return LinkDao.updateLinkById(id, resource);
   }
 
   async readById(id: Types.ObjectId) {
-    return FeatureFlagsDao.getFeatureById(id);
+    return LinkDao.getLinkById(id);
   }
 
   async putById(id: Types.ObjectId, resource: PutLinkDto) {
-    return FeatureFlagsDao.updateFeatureById(id, resource);
+    return LinkDao.updateLinkById(id, resource);
   }
 }
 
