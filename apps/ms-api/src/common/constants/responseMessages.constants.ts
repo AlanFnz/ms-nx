@@ -1,5 +1,3 @@
-import { Link } from "@ixtlan-nx/shared-types";
-
 export const ResponseMessages = {
   // common
   VALIDATION_ERROR:
@@ -14,7 +12,7 @@ export const ResponseMessages = {
   INVALID_DATA: "Invalid email and/or password",
 
   // links
-  LINK_NOT_FOUND: (linkId: Link) => `Feature ${linkId} not found`,
+  LINK_NOT_FOUND: (linkId: any) => `Feature ${linkId} not found`,
   LINKS_GET_FAIL: "Something went wrong when fetching links",
   LINK_GET_FAIL: "Something went wrong when fetching this link",
   LINK_CREATE_FAIL: "Something went wrong when creating this link",

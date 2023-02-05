@@ -1,34 +1,36 @@
-import debug from "debug";
-import { Types } from "mongoose";
+import debug from 'debug';
+import { Types } from 'mongoose';
 
-import { CreateFeatureFlagDto } from "../dto/create.featureFlag.dto";
-import { PatchFeatureFlagDto } from "../dto/patch.featureFlag.dto";
-import { PutFeatureFlagDto } from "../dto/put.featureFlag.dto";
+import { CreateFeatureFlagDto } from '../dto/create.link.dto';
+import { PatchLinkDto } from '../dto/patch.link.dto';
+import { PutLinkDto } from '../dto/put.link.dto';
 
-import mongooseService from "../../common/services/mongoose.service";
+import mongooseService from '../../common/services/mongoose.service';
 
-const log: debug.IDebugger = debug("app:feature-flags-dao");
+const log: debug.IDebugger = debug('app:feature-flags-dao');
 
-class FeatureFlagsDao {
+class LinksDao {
   Schema = mongooseService.getMongoose().Schema;
 
-  featureFlagSchema = new this.Schema({
+  linkSchema = new this.Schema({
     name: { type: String, required: true },
-    version: { type: String, required: true },
-    minimumAppVersion: { type: String, required: true },
-    enabledIOS: { type: Boolean, required: true },
-    enabledAndroid: { type: Boolean, required: true },
-    enabledWeb: { type: Boolean, required: true },
-    permissionFlags: { type: Number }, // TODO: we may want to add a default value
+    title: { type: String, required: true },
+    url: { type: String, required: true },
+    visible: { type: Boolean, required: true },
+    dateCreated: { type: Date, default: Date.now },
+    lastUpdate: { type: Date, default: Date.now },
+    type: { type: String, required: true },
   });
 
-  Feature = mongooseService.getMongoose().model("Feature", this.featureFlagSchema);
+  Feature = mongooseService
+    .getMongoose()
+    .model('Link', this.linkSchema);
 
   //////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////
 
   constructor() {
-    log("Created new instance of FeatureFlagsDao");
+    log('Created new instance of LinksDao');
   }
 
   // methods /////////////////
@@ -50,7 +52,7 @@ class FeatureFlagsDao {
 
   async updateFeatureById(
     featureId: Types.ObjectId,
-    featureFields: PatchFeatureFlagDto | PutFeatureFlagDto
+    featureFields: PatchLinkDto | PutLinkDto
   ) {
     const existingFeature = await this.Feature.findOneAndUpdate(
       { _id: featureId },
@@ -66,4 +68,4 @@ class FeatureFlagsDao {
   }
 }
 
-export default new FeatureFlagsDao();
+export default new LinksDao();

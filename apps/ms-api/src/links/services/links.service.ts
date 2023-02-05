@@ -1,12 +1,12 @@
 import { Types } from 'mongoose';
 
-import FeatureFlagsDao from "../dao/featureFlags.dao";
+import FeatureFlagsDao from "../dao/links.dao";
 import { CRUD } from "../../common/interfaces/crud.interface";
-import { CreateFeatureFlagDto } from "../dto/create.featureFlag.dto";
-import { PutFeatureFlagDto } from "../dto/put.featureFlag.dto";
-import { PatchFeatureFlagDto } from "../dto/patch.featureFlag.dto";
+import { CreateFeatureFlagDto } from "../dto/create.link.dto";
+import { PutLinkDto } from "../dto/put.link.dto";
+import { PatchLinkDto } from "../dto/patch.link.dto";
 
-class FeatureFlagsService implements CRUD {
+class LinksService implements CRUD {
   async create(resource: CreateFeatureFlagDto) {
     return FeatureFlagsDao.addFeature(resource);
   }
@@ -19,7 +19,7 @@ class FeatureFlagsService implements CRUD {
     return FeatureFlagsDao.getFeatures(limit, page);
   }
 
-  async patchById(id: Types.ObjectId, resource: PatchFeatureFlagDto) {
+  async patchById(id: Types.ObjectId, resource: PatchLinkDto) {
     return FeatureFlagsDao.updateFeatureById(id, resource);
   }
 
@@ -27,9 +27,9 @@ class FeatureFlagsService implements CRUD {
     return FeatureFlagsDao.getFeatureById(id);
   }
 
-  async putById(id: Types.ObjectId, resource: PutFeatureFlagDto) {
+  async putById(id: Types.ObjectId, resource: PutLinkDto) {
     return FeatureFlagsDao.updateFeatureById(id, resource);
   }
 }
 
-export default new FeatureFlagsService();
+export default new LinksService();
