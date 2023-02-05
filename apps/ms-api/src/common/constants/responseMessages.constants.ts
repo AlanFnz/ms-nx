@@ -20,4 +20,12 @@ export const ResponseMessages = {
   LINK_UPDATE_FAIL: "Something went wrong when updating this link",
   LINK_DELETE_FAIL: "Something went wrong when deleting this link",
 
+  // posters
+  POSTER_NOT_FOUND: (posterId: any) => `Feature ${posterId} not found`,
+  POSTERS_GET_FAIL: "Something went wrong when fetching posters",
+  POSTER_GET_FAIL: "Something went wrong when fetching this poster",
+  POSTER_CREATE_FAIL: "Something went wrong when creating this poster",
+  POSTER_UPDATE_FAIL: "Something went wrong when updating this poster",
+  POSTER_DELETE_FAIL: "Something went wrong when deleting this poster",
+
 };
