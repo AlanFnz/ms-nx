@@ -1,6 +1,6 @@
-import * as express from 'express';
+import express from "express";
+import cors from 'cors';
 import * as path from 'path';
-import * as cors from 'cors';
 
 // data set
 import { links } from './data/links';
