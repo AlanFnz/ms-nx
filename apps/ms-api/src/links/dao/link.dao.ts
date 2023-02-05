@@ -9,7 +9,7 @@ import mongooseService from '../../common/services/mongoose.service';
 
 const log: debug.IDebugger = debug('app:feature-flags-dao');
 
-class LinksDao {
+class LinkDao {
   Schema = mongooseService.getMongoose().Schema;
 
   linkSchema = new this.Schema({
@@ -30,7 +30,7 @@ class LinksDao {
   //////////////////////////////////////////////////////////////////////////////
 
   constructor() {
-    log('Created new instance of LinksDao');
+    log('Created new instance of LinkDao');
   }
 
   // methods /////////////////
@@ -68,4 +68,4 @@ class LinksDao {
   }
 }
 
-export default new LinksDao();
+export default new LinkDao();
