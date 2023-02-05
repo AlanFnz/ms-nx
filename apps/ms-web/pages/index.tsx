@@ -23,8 +23,13 @@ export function Index({ links }: { links: Link[] }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3333/links');
-  const links = await res.json();
+  let links = [];
+  try {
+    const res = await fetch('http://localhost:3333/links');
+    links = await res.json();
+  } catch (e) {
+    console.error(e);
+  }
 
   return {
     props: {
