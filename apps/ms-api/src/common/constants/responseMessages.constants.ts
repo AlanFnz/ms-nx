@@ -4,6 +4,7 @@ export const ResponseMessages = {
     "One or more errors occurred when validating this request body",
   OBJECT_ID_ERROR: "Something went wrong when getting this object id",
   INVALID_ID: "Invalid ID",
+  FORBIDDEN: "Unauthorized",
 
   // auth
   JWT_FAIL: "Something went wrong when creating this token",
