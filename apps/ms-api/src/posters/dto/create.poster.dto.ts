@@ -3,7 +3,7 @@ export interface CreatePosterDto {
   title: string;
   printUrl: string;
   instagramUrl: string;
-  img: { data: Buffer; contentType: string };
+  img: { data: Buffer, contentType: string };
   visible: boolean;
   print: boolean;
   downloadable: boolean;
