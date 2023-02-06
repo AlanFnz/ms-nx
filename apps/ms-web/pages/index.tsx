@@ -8,18 +8,7 @@ const MainContainer = styled.div`
 `;
 
 export function Index({ links }: { links: Link[] }) {
-  return (
-    <MainContainer>
-      <ul>
-        {links &&
-          links.map(({ id, title, url }) => (
-            <li key={id}>
-              <a href={url}>{title}</a>
-            </li>
-          ))}
-      </ul>
-    </MainContainer>
-  );
+  return <MainContainer></MainContainer>;
 }
 
 export async function getServerSideProps() {
