@@ -8,6 +8,12 @@ export interface Link {
   dateCreated: string;
   lastUpdate: null;
   type: string;
+  svg?: {
+    xmlns: string;
+    fill: string;
+    viewBox: string;
+    d: string;
+  };
 }
 
 export interface Poster {

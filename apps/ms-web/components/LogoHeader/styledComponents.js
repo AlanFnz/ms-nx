@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LogoContainer = styled.div`
   width: 100vw;
-  height: 12em;
+  padding: 70px 0 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
