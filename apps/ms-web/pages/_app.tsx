@@ -1,5 +1,6 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import LogoHeader from '../components/LogoHeader/LogoHeader';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
@@ -9,6 +10,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Mystery Skools</title>
       </Head>
       <main className="app">
+        <LogoHeader />
         <Component {...pageProps} />
       </main>
     </>
