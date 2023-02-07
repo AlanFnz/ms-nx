@@ -1,30 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import type { Link } from '@ixtlan-nx/shared-types';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import { posters } from '../data/posters';
 
 const MainContainer = styled.div`
-  .page {
-  } q
+  height: 90vh;
+  width: 100%;
+  padding: 30px 5vw;
 `;
 
-export function Index({ links }: { links: Link[] }) {
-  return <MainContainer></MainContainer>;
+export function Index() {
+  console.log('AAA', posters);
+  return (
+    <MainContainer>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry gutter={"6px"}>
+          {posters.map((poster) => (
+            <img key={poster.id} alt={poster.title} src={poster.src} />
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
+    </MainContainer>
+  );
 }
 
-export async function getServerSideProps() {
-  let links = [];
-  try {
-    const res = await fetch('http://localhost:3333/links');
-    links = await res.json();
-  } catch (e) {
-    console.error(e);
-  }
-
-  return {
-    props: {
-      links,
-    },
-  };
-}
 
 export default Index;
