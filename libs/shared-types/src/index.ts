@@ -18,13 +18,15 @@ export interface Link {
 
 export interface Poster {
   id: string;
+  order: number;
   name: string;
   title: string;
-  printUrl: string;
-  instagramUrl: string;
+  src: string;
+  printUrl?: string;
+  instagramUrl?: string;
   img?: { data: Buffer; contentType: string };
   visible: boolean;
-  print: boolean;
+  printable: boolean;
   downloadable: boolean;
   dateCreated: Date;
   lastUpdate: Date;
