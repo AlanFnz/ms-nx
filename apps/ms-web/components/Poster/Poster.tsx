@@ -1,18 +1,17 @@
+import useMasonryImage from 'apps/ms-web/hooks/useImagePosition';
 import React, { useState } from 'react';
 import { PosterContainer, PosterImage } from './styledComponents';
 
 const Poster = ({ alt, src }) => {
-  const [paddingTop, setPaddingTop] = useState('0');
+  const { getPaddingTop, paddingTop } = useMasonryImage();
+
   return (
     <PosterContainer style={{ paddingTop }}>
       <PosterImage
         alt={alt}
         src={src}
         fill
-        onLoad={({ target }) => {
-          const { naturalWidth, naturalHeight } = target as HTMLImageElement;
-          setPaddingTop(`calc(100% / (${naturalWidth} / ${naturalHeight})`);
-        }}
+        onLoad={getPaddingTop}
       />
     </PosterContainer>
   );
