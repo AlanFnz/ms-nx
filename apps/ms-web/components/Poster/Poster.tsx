@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { PosterImage } from './styledComponents';
+import { PosterContainer, PosterImage } from './styledComponents';
 
-const Poster = ({ key, alt, src }) => {
+const Poster = ({ alt, src }) => {
   const [paddingTop, setPaddingTop] = useState('0');
   return (
-    <div style={{ position: 'relative', paddingTop }}>
+    <PosterContainer style={{ paddingTop }}>
       <PosterImage
-        key={key}
         alt={alt}
         src={src}
         fill
@@ -15,7 +14,7 @@ const Poster = ({ key, alt, src }) => {
           setPaddingTop(`calc(100% / (${naturalWidth} / ${naturalHeight})`);
         }}
       />
-    </div>
+    </PosterContainer>
   );
 };
 
