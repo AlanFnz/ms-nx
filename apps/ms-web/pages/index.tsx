@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { posters } from '../data/posters';
+import Poster from '../components/Poster/Poster';
 
 const MainContainer = styled.div`
   height: 90vh;
@@ -16,7 +17,7 @@ export function Index() {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
         <Masonry gutter={"6px"}>
           {posters.map((poster) => (
-            <img key={poster.id} alt={poster.title} src={poster.src} />
+            <Poster key={poster.id} alt={poster.title} src={poster.src} />
           ))}
         </Masonry>
       </ResponsiveMasonry>
