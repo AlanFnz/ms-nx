@@ -11,19 +11,17 @@ const MainContainer = styled.div`
 `;
 
 export function Index() {
-  console.log('AAA', posters);
   return (
     <MainContainer>
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-        <Masonry gutter={"6px"}>
+        <Masonry gutter={'6px'}>
           {posters.map((poster) => (
-            <Poster key={poster.id} alt={poster.title} src={poster.src} />
+            <Poster key={poster.id} title={poster.title} src={poster.src} />
           ))}
         </Masonry>
       </ResponsiveMasonry>
     </MainContainer>
   );
 }
-
 
 export default Index;

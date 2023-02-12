@@ -19,8 +19,8 @@ export interface Link {
 export interface Poster {
   id: string;
   order: number;
-  name: string;
   title: string;
+  description?: string;
   src: string;
   printUrl?: string;
   instagramUrl?: string;

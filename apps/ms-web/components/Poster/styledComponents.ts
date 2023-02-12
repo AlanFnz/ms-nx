@@ -24,6 +24,21 @@ export const PosterContainer = styled.div`
   &:hover:before {
     height: 100%;
   }
+
+  &:after {
+    position: absolute;
+    z-index: 11;
+    bottom: -1vw;
+    opacity: 0;
+    left: 1vw;
+    content: '${(props) => props.title}';
+  }
+
+  &:hover:after {
+    bottom: 1vw;
+    opacity: 1;
+    transition: 500ms ease-out;
+  }
 `;
 
 export const PosterImage = styled(Image)``;

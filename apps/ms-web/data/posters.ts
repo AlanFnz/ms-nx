@@ -4,8 +4,7 @@ export const posters: Poster[] = [
   {
     id: '1',
     order: 1,
-    name: 'poster 1',
-    title: 'title 1',
+    title: 'God is a system designer',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/9pMb6wq/god-is-a-system-designer.png',
@@ -18,8 +17,7 @@ export const posters: Poster[] = [
   {
     id: '2',
     order: 2,
-    name: 'poster 2',
-    title: 'title 2',
+    title: 'Feel it to see it',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/wKLFWWZ/feel-it-to-see-it.png',
@@ -32,8 +30,7 @@ export const posters: Poster[] = [
   {
     id: '3',
     order: 3,
-    name: 'poster 3',
-    title: 'title 3',
+    title: 'We all disappear',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/njqFw7Y/we-all-disappear-anyways.png',
@@ -46,8 +43,7 @@ export const posters: Poster[] = [
   {
     id: '4',
     order: 4,
-    name: 'poster 4',
-    title: 'title 4',
+    title: 'Endless & beginningless',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/18ryQT3/endless-beginningless.png',
@@ -60,8 +56,7 @@ export const posters: Poster[] = [
   {
     id: '5',
     order: 5,
-    name: 'poster 5',
-    title: 'title 5',
+    title: 'Endless possibilities',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/c2cMYcg/endless-possibilities.png',
@@ -74,8 +69,7 @@ export const posters: Poster[] = [
   {
     id: '6',
     order: 6,
-    name: 'poster 6',
-    title: 'title 6',
+    title: 'Mind (dis)satisfaction',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/zm9S93D/will-the-mind-ever-be-satisfied.png',
@@ -88,8 +82,7 @@ export const posters: Poster[] = [
   {
     id: '7',
     order: 7,
-    name: 'poster 7',
-    title: 'title 7',
+    title: 'Controlled madness',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/tD3yhhF/controlled-madness.png',
@@ -102,8 +95,7 @@ export const posters: Poster[] = [
   {
     id: '8',
     order: 8,
-    name: 'poster 8',
-    title: 'title 8',
+    title: 'Self aware',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/zXp3KSP/self-aware.png',
@@ -116,8 +108,7 @@ export const posters: Poster[] = [
   {
     id: '9',
     order: 9,
-    name: 'poster 9',
-    title: 'title 9',
+    title: 'Looking within',
     printUrl: 'https://#',
     instagramUrl: 'https://instagram.com/mystery.skools',
     src: 'https://i.ibb.co/427Wf0H/looking-within-color.png',
