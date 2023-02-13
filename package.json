@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.2",
     "@types/cors": "^2.8.13",
     "@types/debug": "^4.1.7",
     "argon2": "^0.30.3",
