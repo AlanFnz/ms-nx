@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const fetchPosters = createAsyncThunk('posters/fetchPosters', () => {
-  axios
+  return axios
     .get('https://api.printful.com/store/products', {
       headers: {
         'Access-Control-Allow-Origin': '*',
