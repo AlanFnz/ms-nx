@@ -8,7 +8,7 @@ const initialState = {
   loading: false,
 };
 
-const fetchPosters = createAsyncThunk('posters/fetchPosters', () => {
+export const fetchPosters = createAsyncThunk('posters/fetchPosters', () => {
   return axios
     .get('https://api.printful.com/store/products', {
       headers: {
