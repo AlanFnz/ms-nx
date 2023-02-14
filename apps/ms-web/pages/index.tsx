@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
-import { State } from '../types/commonTypes';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPosters } from '../state/slices/posters';
+import { AppDispatch, RootState } from '../state/store';
+
 import Poster from '../components/Poster/Poster';
 
 const MainContainer = styled.div`
@@ -12,7 +15,12 @@ const MainContainer = styled.div`
 `;
 
 export function Index() {
-  const posters = useSelector((state: State) => state.posters);
+  const dispatch = useDispatch<AppDispatch>();
+  const posters = useSelector((state: RootState) => state.posters);
+
+  useEffect(() => {
+    dispatch(fetchPosters);
+  });
 
   return (
     <MainContainer>
