@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
+import { State } from '../types/commonTypes';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
-import { posters } from '../data/posters';
 import Poster from '../components/Poster/Poster';
 
 const MainContainer = styled.div`
@@ -11,6 +12,8 @@ const MainContainer = styled.div`
 `;
 
 export function Index() {
+  const posters = useSelector((state: State) => state.posters);
+
   return (
     <MainContainer>
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
