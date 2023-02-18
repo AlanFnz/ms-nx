@@ -16,10 +16,10 @@ const MainContainer = styled.div`
 
 export function Index() {
   const dispatch = useDispatch<AppDispatch>();
-  const posters = useSelector((state: RootState) => state.posters);
+  const posters = useSelector((state: RootState) => state.posters.data);
 
   useEffect(() => {
-    dispatch(fetchPosters);
+    dispatch(fetchPosters());
   });
 
   return (

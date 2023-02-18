@@ -16,7 +16,7 @@ export interface Link {
   };
 }
 
-export interface Poster {
+export type Poster = {
   id: string;
   order: number;
   title: string;
@@ -24,10 +24,9 @@ export interface Poster {
   src: string;
   printUrl?: string;
   instagramUrl?: string;
-  img?: { data: Buffer; contentType: string };
   visible: boolean;
   printable: boolean;
   downloadable: boolean;
-  dateCreated: Date;
-  lastUpdate: Date;
+  dateCreated: number;
+  lastUpdate: number;
 }
