@@ -41,7 +41,7 @@ export const fetchPosters = createAsyncThunk(
         },
         withCredentials: true,
       })
-      .then((response) => response.data?.message?.result);
+      .then((response) => response.data?.posters);
   }
 );
 

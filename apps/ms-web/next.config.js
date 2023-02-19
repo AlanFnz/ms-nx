@@ -17,11 +17,11 @@ const nextConfig = {
     styledComponents: true
   },
   images: {
-    domains: ['i.ibb.co'],
+    domains: ['files.cdn.printful.com'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'i.ibb.co',
+        hostname: 'files.cdn.printful.com',
       },
     ],
   },
