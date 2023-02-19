@@ -20,7 +20,7 @@ export function Index() {
 
   useEffect(() => {
     dispatch(fetchPosters());
-  });
+  }, []);
 
   return (
     <MainContainer>

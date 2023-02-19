@@ -33,7 +33,7 @@ export const fetchPosters = createAsyncThunk(
   'posters/fetchPosters',
   async () => {
     return axios
-      .get('https://api.printful.com/store/products', {
+      .get('/api/posters', {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-type': 'Application/json',
@@ -41,7 +41,7 @@ export const fetchPosters = createAsyncThunk(
         },
         withCredentials: true,
       })
-      .then((response) => response.data);
+      .then((response) => response.data?.message?.result);
   }
 );
 
