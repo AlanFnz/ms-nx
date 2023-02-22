@@ -17,7 +17,7 @@ export interface Link {
 }
 
 export type Poster = {
-  id: string;
+  id: number;
   order: number;
   title: string;
   description?: string;

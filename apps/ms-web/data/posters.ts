@@ -2,7 +2,7 @@ import type { Poster } from '@ixtlan-nx/shared-types';
 
 export const posters: Poster[] = [
   {
-    id: '1',
+    id: 300103107,
     order: 1,
     title: 'God is a system designer',
     printUrl: 'https://#',
@@ -15,7 +15,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '2',
+    id: 2,
     order: 2,
     title: 'Feel it to see it',
     printUrl: 'https://#',
@@ -28,7 +28,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '3',
+    id: 3,
     order: 3,
     title: 'We all disappear',
     printUrl: 'https://#',
@@ -41,7 +41,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '4',
+    id: 4,
     order: 4,
     title: 'Endless & beginningless',
     printUrl: 'https://#',
@@ -54,7 +54,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '5',
+    id: 5,
     order: 5,
     title: 'Endless possibilities',
     printUrl: 'https://#',
@@ -67,7 +67,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '6',
+    id: 6,
     order: 6,
     title: 'Mind (dis)satisfaction',
     printUrl: 'https://#',
@@ -80,7 +80,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '7',
+    id: 7,
     order: 7,
     title: 'Controlled madness',
     printUrl: 'https://#',
@@ -93,7 +93,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '8',
+    id: 8,
     order: 8,
     title: 'Self aware',
     printUrl: 'https://#',
@@ -106,7 +106,7 @@ export const posters: Poster[] = [
     lastUpdate: Date.now(),
   },
   {
-    id: '9',
+    id: 9,
     order: 9,
     title: 'Looking within',
     printUrl: 'https://#',
