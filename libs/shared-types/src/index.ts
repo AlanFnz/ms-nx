@@ -18,6 +18,7 @@ export interface Link {
 
 export type Poster = {
   id: number;
+  printfulId: number;
   order: number;
   title: string;
   description?: string;

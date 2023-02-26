@@ -1,6 +1,4 @@
-import { Types } from 'mongoose';
-
-import FeatureFlagsDao from "../dao/poster.dao";
+import PostersDao from "../dao/poster.dao";
 import { CRUD } from "../../common/interfaces/crud.interface";
 import { CreatePosterDto } from "../dto/create.poster.dto";
 import { PutPosterDto } from "../dto/put.poster.dto";
@@ -8,27 +6,27 @@ import { PatchPosterDto } from "../dto/patch.poster.dto";
 
 class LinksService implements CRUD {
   async create(resource: CreatePosterDto) {
-    return FeatureFlagsDao.addPoster(resource);
+    return PostersDao.addPoster(resource);
   }
 
-  async deleteById(id: Types.ObjectId) {
-    return FeatureFlagsDao.removePosterById(id);
+  async deleteById(id: number) {
+    return PostersDao.removePosterById(id);
   }
 
   async list(limit: number, page: number) {
-    return FeatureFlagsDao.getPosters(limit, page);
+    return PostersDao.getPosters(limit, page);
   }
 
-  async patchById(id: Types.ObjectId, resource: PatchPosterDto) {
-    return FeatureFlagsDao.updatePosterById(id, resource);
+  async patchById(id: number, resource: PatchPosterDto) {
+    return PostersDao.updatePosterById(id, resource);
   }
 
-  async readById(id: Types.ObjectId) {
-    return FeatureFlagsDao.getPosterById(id);
+  async readById(id: number) {
+    return PostersDao.getPosterById(id);
   }
 
-  async putById(id: Types.ObjectId, resource: PutPosterDto) {
-    return FeatureFlagsDao.updatePosterById(id, resource);
+  async putById(id: number, resource: PutPosterDto) {
+    return PostersDao.updatePosterById(id, resource);
   }
 }
 
