@@ -1,7 +1,7 @@
 /** source/controllers/posts.ts */
 import { Request, Response, NextFunction } from 'express';
 import axios, { AxiosResponse } from 'axios';
-import { transformPrintfulPostersResponse } from 'apps/ms-web/utils/api';
+import { transformPrintfulPostersResponse } from 'apps/ms-web/utils/printful';
 
 const handler = async (req: Request, res: Response, next: NextFunction) => {
   switch (req.method) {
