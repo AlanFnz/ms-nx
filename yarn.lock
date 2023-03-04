@@ -12713,6 +12713,11 @@ shell-quote@^1.6.1, shell-quote@^1.7.2, shell-quote@^1.7.3:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.4.tgz#33fe15dee71ab2a81fcbd3a52106c5cfb9fb75d8"
   integrity sha512-8o/QEhSSRb1a5i7TFR0iM4G16Z0vYB2OQVs4G3aAFXjn3T6yEx8AZxy1PgDF7I00LZHYA3WxaSYIf5e5sAX8Rw==
 
+shopify-buy@^2.18.0:
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/shopify-buy/-/shopify-buy-2.18.0.tgz#8f0fde1ea29662a7dff4bcd69d0ee9e07a26ba77"
+  integrity sha512-UaK/oegLRoeAHCfuYj+fVPfsdB8g6LoFdBg9YkSULDlzgWCHVBYWp+g4/1hYS1EZe0SRXFRkksf/3ESwFS8Nig==
+
 side-channel@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/side-channel/-/side-channel-1.0.4.tgz#efce5c8fdc104ee751b25c58d4290011fa5ea2cf"
