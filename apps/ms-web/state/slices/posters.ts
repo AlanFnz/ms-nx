@@ -12,7 +12,8 @@ type initialState = {
 const initialState: initialState = {
   data: [],
   currentPoster: {
-    id: '',
+    id: 0,
+    printfulId: 0,
     order: 0,
     title: '',
     description: '',
