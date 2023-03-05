@@ -3713,6 +3713,11 @@
     "@types/mime" "*"
     "@types/node" "*"
 
+"@types/shopify-buy@^2.17.0":
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/@types/shopify-buy/-/shopify-buy-2.17.0.tgz#2cfd9592254dcb3c09c3d9b8b5046b064e28cddd"
+  integrity sha512-70j7qEdxSxCzYaIQ7gum3yKU0cqsHChPQvOTuGaaL9YndFqn2W6zW+x+V3LoRdzrb6V+FaLXAc+3r4Yb+dQXOA==
+
 "@types/sinonjs__fake-timers@8.1.1":
   version "8.1.1"
   resolved "https://registry.yarnpkg.com/@types/sinonjs__fake-timers/-/sinonjs__fake-timers-8.1.1.tgz#b49c2c70150141a15e0fa7e79cf1f92a72934ce3"
