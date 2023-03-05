@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchPosters } from '../state/slices/posters';
+import { fetchPosters } from '../state/slices/shopify';
 import { AppDispatch, RootState } from '../state/store';
 
 import Poster from '../components/Poster/Poster';
@@ -16,7 +16,7 @@ const MainContainer = styled.div`
 
 export function Index() {
   const dispatch = useDispatch<AppDispatch>();
-  const posters = useSelector((state: RootState) => state.posters.data);
+  const posters = useSelector((state: RootState) => state.shopify.posters);
 
   useEffect(() => {
     dispatch(fetchPosters());
@@ -27,7 +27,7 @@ export function Index() {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
         <Masonry gutter={'6px'}>
           {posters.map((poster) => (
-            <Poster key={poster.id} title={poster.title} src={poster.src} />
+            <Poster key={poster.id} title={poster.title} src={poster.images[0].src} />
           ))}
         </Masonry>
       </ResponsiveMasonry>
