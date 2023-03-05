@@ -1,4 +1,4 @@
-import { posters } from "../data/posters";
+import { posters } from "../../data/posters";
 
 export const transformPrintfulPostersResponse = (data: [any]) => {
   let transformedData = [];
