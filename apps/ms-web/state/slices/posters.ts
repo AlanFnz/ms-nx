@@ -30,11 +30,11 @@ const initialState: initialState = {
   loading: false,
 };
 
-export const fetchPosters = createAsyncThunk(
-  'posters/fetchPosters',
+export const fetchPrintfulPosters = createAsyncThunk(
+  'posters/fetchPrintfulPosters',
   async () => {
     return axios
-      .get('/api/posters', {
+      .get('/api/printfulPosters', {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-type': 'Application/json',
@@ -65,15 +65,15 @@ const postersSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchPosters.pending, (state) => {
+    builder.addCase(fetchPrintfulPosters.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchPosters.fulfilled, (state, action) => {
+    builder.addCase(fetchPrintfulPosters.fulfilled, (state, action) => {
       state.loading = false;
       state.data = action.payload;
       state.errorMessage = '';
     });
-    builder.addCase(fetchPosters.rejected, (state, action) => {
+    builder.addCase(fetchPrintfulPosters.rejected, (state, action) => {
       state.loading = false;
       state.errorMessage = action.error.message;
     });
